@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 32.33%;
+    height: auto;
+    margin-right: 1%;
+    border: 2px solid black;
+}
+
+.box-header {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    float: right;
+    margin: 0;
+    padding: 2px 35px;
+}
+
+.color-pink {
+    background-color: pink;
+}
+
+.color-red {
+    background-color: red;
+}
+
+.color-yellow {
+    background-color: yellow;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.bg-aaa{
+    background-color: #aaa;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    .test {
+        width: 100% !important;
+    }
+}
+
+/* ##Device = Tablets, Ipads (portrait)  ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .test {
+        width: 100% !important;
+    }
+    .column{
+        margin-bottom: 20px;
+        width: 48%;
+        margin-right: 0;
+    }
+    .row{
+        padding: 25px;
+    }
+    .row .column:nth-child(1){
+        margin-right: 2%;
+    }
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    .column{
+        margin-bottom: 20px;
+    }
+    .row{
+        padding: 25px;
+    }
+}
